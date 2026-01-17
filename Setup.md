@@ -8,12 +8,10 @@ Haskell toolchain installer.
 
 Using GHCup, the following tools will be installed automatically:
 
--   **GHC** -- The Glasgow Haskell Compiler\
--   **cabal-install** -- Tool for building and managing Haskell
-    packages\
--   **Stack** -- A modern build tool for Haskell projects\
--   **haskell-language-server (optional)** -- Provides IDE features like
-    auto-completion, error highlighting, etc.
+-   **GHC** -- The Glasgow Haskell Compiler
+-   **cabal-install** -- Tool for building and managing Haskell packages
+-   **Stack** -- A modern build tool for Haskell projects
+-   **haskell-language-server (optional)** -- Provides IDE features like auto-completion, error highlighting, etc.
 
 ------------------------------------------------------------------------
 
