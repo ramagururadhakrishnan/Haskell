@@ -38,16 +38,10 @@ You may need to restart your terminal.
 Run the following command in PowerShell **as Administrator**:
 
 ``` powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force;
-[System.Net.ServicePointManager]::SecurityProtocol =
-[System.Net.ServicePointManager]::SecurityProtocol -bor 3072;
-try {
-  Invoke-Command -ScriptBlock
-  ([ScriptBlock]::Create(
-    (Invoke-WebRequest https://www.haskell.org/ghcup/sh/bootstrap-haskell.ps1 -UseBasicParsing)
-  )) -ArgumentList $true
-}
-catch { Write-Error $_ }
+Set-ExecutionPolicy Bypass -Scope Process -Force; 
+[System.Net.ServicePointManager]::SecurityProtocol = 
+[System.Net.ServicePointManager]::SecurityProtocol -bor 3072; 
+iex ((New-Object System.Net.WebClient).DownloadString('https://www.haskell.org/ghcup/sh/bootstrap-haskell.ps1'))
 ```
 
 The tools will be installed in:
